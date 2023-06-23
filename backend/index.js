@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const PORT = 6010;
+const PORT = process.env.PORT || 6010;
 
 mongoose.connect(process.env.MONGO_URI, () => {
     console.log("MongoDB Connected....");
